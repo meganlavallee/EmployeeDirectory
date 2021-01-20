@@ -1,6 +1,5 @@
 import { url } from "inspector";
 import React from "react";
-const url = ""
 
 class List extends React.Component {
     state = {
@@ -18,6 +17,6 @@ class List extends React.Component {
         this.setState({empsearch: employees});
     }
 
-
     
 }
+export default List;
