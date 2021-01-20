@@ -1,4 +1,7 @@
 import React from "react";
+<script href="list.js"></script>;
+<script href="search.js"></script>;
+<script href="sort.js"></script>
 
 class List extends React.Component {
     state = {
@@ -14,72 +17,72 @@ class List extends React.Component {
     
         const { employees, sorted } = this.state;
     
-        let sortedEmps;
+        let empsearch;
     
         switch (name) {
           case "first":
             if (!sorted) {
-              sortedEmps = employees.sort(function (a, b) {
+              empsearch = employees.sort(function (a, b) {
                 return a.name.first > b.name.first ? 1 : -1;
               });
             } else {
-              sortedEmps = employees.reverse();
+              empsearch = employees.reverse();
             }
-            this.setState({ employees: sortedEmps, sorted: !sorted });
+            this.setState({ employees: empsearch, sorted: !sorted });
     
             break;
           case "last":
             if (!sorted) {
-              sortedEmps = employees.sort(function (a, b) {
+              empsearch = employees.sort(function (a, b) {
                 return a.name.last > b.name.last ? 1 : -1;
               });
             } else {
-              sortedEmps = employees.reverse();
+              empsearch = employees.reverse();
             }
-            this.setState({ employees: sortedEmps, sorted: !sorted });
+            this.setState({ employees: empsearch, sorted: !sorted });
     
             break;
           case "email":
             if (!sorted) {
-              sortedEmps = employees.sort(function (a, b) {
+              empsearch = employees.sort(function (a, b) {
                 return a.email > b.email ? 1 : -1;
               });
             } else {
-              sortedEmps = employees.reverse();
+              empsearch = employees.reverse();
             }
-            this.setState({ employees: sortedEmps, sorted: !sorted });
+            this.setState({ employees: empsearch, sorted: !sorted });
     
             break;
           case "age":
             if (!sorted) {
-              sortedEmps = employees.sort(function (a, b) {
+              empsearch = employees.sort(function (a, b) {
                 return a.dob.age > b.dob.age ? 1 : -1;
               });
             } else {
-              sortedEmps = employees.reverse();
+              empsearch = employees.reverse();
             }
-            this.setState({ employees: sortedEmps, sorted: !sorted });
+            this.setState({ employees: empsearch, sorted: !sorted });
     
             break;
           case "location":
             if (!sorted) {
-              sortedEmps = employees.sort(function (a, b) {
+              empsearch = employees.sort(function (a, b) {
                 return a.location.city > b.location.city ? 1 : -1;
               });
             } else {
-              sortedEmps = employees.reverse();
+              empsearch = employees.reverse();
             }
-            this.setState({ employees: sortedEmps, sorted: !sorted });
+            this.setState({ employees: empsearch, sorted: !sorted });
             break;
           case "phone":
             if (!sorted) {
-              sortedEmps = employees.sort(function (a, b) {
+              empsearch = employees.sort(function (a, b) {
                 return a.cell > b.cell ? 1 : -1;
               });
             } else {
-              sortedEmps = employees.reverse();
+              empsearch = employees.reverse();
             }
-            this.setState({ employees: sortedEmps, sorted: !sorted });
+            this.setState({ employees: empsearch, sorted: !sorted });
             break;
     
           default:

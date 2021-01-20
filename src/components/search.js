@@ -1,10 +1,13 @@
 import React from "react";
+<script href="list.js"></script>;
+<script href="search.js"></script>;
+<script href="sort.js"></script>
 
 
 class List extends React.Component {
   state = {
     employees: [],
-    searchedEmps: [],
+    empsearch: [],
     search: "",
     sorted: false,
     isSearching: false,
@@ -29,12 +32,12 @@ class List extends React.Component {
     });
     console.log(filteredData);
     this.setState({
-      searchedEmps: filteredData,
+      empsearch: filteredData,
     });
   };
 
   render() {
-    const { searchedEmps } = this.state;
+    const { empsearch } = this.state;
     return (
       <>
         <form className="form">
@@ -83,7 +86,7 @@ class List extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {searchedEmps.map((employee) => (
+            {empsearch.map((employee) => (
               <tr key={employee.login.uuid}>
                 <td>
                   <img src={employee.picture.thumbnail} alt=""></img>
