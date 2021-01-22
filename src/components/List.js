@@ -1,9 +1,9 @@
 import { url } from "inspector";
 import React from "react";
+import search from "./search";
+import sort from './sort';
 
-<script href="list.js"></script>;
-<script href="search.js"></script>;
-<script href="sort.js"></script>
+
 class List extends React.Component {
     state = {
         employees: [],

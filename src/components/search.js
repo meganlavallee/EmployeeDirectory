@@ -1,17 +1,16 @@
 import React from "react";
-<script href="list.js"></script>;
-<script href="search.js"></script>;
-<script href="sort.js"></script>
+import List from "./List";
+import sort from './sort';
 
 
-class List extends React.Component {
-  state = {
-    employees: [],
-    empsearch: [],
-    search: "",
-    sorted: false,
-    isSearching: false,
-  };
+// class List extends React.Component {
+//   state = {
+//     employees: [],
+//     empsearch: [],
+//     search: "",
+//     sorted: false,
+//     isSearching: false,
+//   };
 
   handleInputChange = (event) => {
     this.setState(
@@ -105,7 +104,7 @@ class List extends React.Component {
         </table>
       </>
     );
-  }
-}
+  };
+// }
 
 export default List;

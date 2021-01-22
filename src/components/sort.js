@@ -1,18 +1,17 @@
 import React from "react";
-<script href="list.js"></script>;
-<script href="search.js"></script>;
-<script href="sort.js"></script>
+import search from "./search";
+import List from './List';
 
-class List extends React.Component {
-    state = {
-        employees: [],
-        empsearch: [],
-        search: "",
-        sort: false,
-        searching: false,
-    };
+// class List extends React.Component {
+    // state = {
+    //     employees: [],
+    //     empsearch: [],
+    //     search: "",
+    //     sort: false,
+    //     searching: false,
+    // };
 
-    sortBy = (event) => {
+    const sortBy = (event) => {
         const name = event.target.name;
     
         const { employees, sorted } = this.state;
@@ -91,6 +90,6 @@ class List extends React.Component {
 
 
     
-}
-
-export default List;
+// }
+export default sortBy;
+// export default List;
